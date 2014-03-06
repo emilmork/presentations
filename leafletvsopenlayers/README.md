@@ -1,4 +1,4 @@
-Kart biblioteker presentation på Bart.js
+Presentasjon om kart biblioteker på Bart.js
 
 Installer avhengiheter
 
