@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Kart</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/kart.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Kart biblioteker</h1>
+					<p>
+						<small>Emil Mork - <a href="mailto:emil.a.mork@gmail.com">emil.mork@bekk.no</a></small>
+					</p>
+					<div id="bartelogo">
+						<object data="images/bart.svg" id="svg" type="image/svg+xml">logo</object>
+					</div>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul class="list">
+						<li>Teori</li>
+						<li>Biblioteker</li>
+						<li>Koding</li>
+					</ul>
+					</p>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h2>Koordinater - Longitude/Latitude</h2>
+					</header>
+					<ul>
+					<li class="fragment">Steinkjer</li>
+						<ul class="fragment sub">
+							<li>64.015019 | 11.495263</li>
+							<li>64&deg 0' 54.0684'' N | 11&deg 29' 42.9468'' E
+						</ul>
+					</ul>
+					<img id="lonlat" class="pres-image" src="images/lonlat.svg"></section>
+
+
+				</section>
+				<section class="slides">
+					<header>
+						<h2>Projeksjoner</h2>
+					</header>
+					<ul>
+					<li class="fragment">WGS 84</li>
+						<ul class="fragment sub">
+							<li>ID: EPSG:4326</li>
+							<li>Behandler Jorden som en kule</li> 
+						</ul>
+					</li>
+					<li class="fragment">Spherical Mercator</li>
+						<ul class="fragment sub">
+							<li>ID: EPSG:900913</li>
+							<li>Behandler Jorden som en ellipse</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section class="slides">
+				<header>
+					<h2>Lag</h2>
+				</header>
+					<ul>
+					<li class="fragment">WMS</li>
+					<ul class="fragment sub">
+						<li>Kartbilder - Mest brukt, Kjapt</li>
+						<li>PNG/JPEG/SVG - Google v3, krever mer grafikkrendering</li>
+					</ul>
+					<li class="fragment">WFS</li>
+					<ul class="fragment sub">
+						<li>Kartobjekter for interaksjon</li>
+						<li>XML/Json</li>
+					</ul>
+					</ul>
+					<img id="layers-image" class="fragment pres-image" src="images/layers.svg"></section>
+				</section>
+
+
+
+				<section class="slides">
+					<header>
+						<h2>Biblioteker</h2>
+					</header>
+
+					<ul>
+						<li class="list"><a href="http://openlayers.org/">OpenLayers</a></li>
+							<ul class="fragment sub">
+								<li>pros - Stort API med mye fleksibilitet</li>
+								<li>cons - Mye med ikke så bra dokumentasjon</li>
+							</ul>
+						<li class="list fragment"><a href="http://leafletjs.com/">Leaflet</a></li>
+							<ul class="fragment sub">
+								<li>pros - Enkelt og greit</li>
+								<li>cons - Lite API</li>
+							</ul>
+						<li class="list fragment"><a href="https://developers.google.com/maps/">Google Maps</a></li>
+							<ul class="fragment sub">
+								<li>pros - God dokumentasjon</li>
+								<li>cons - Litt låst til Google. Ikke Open</li>
+							</ul>
+						<li class="list fragment">Andre</li>
+						<ul class="fragment sub">
+							<li><a href="http://polymaps.org/ex/#statehood">Polymap</a></li>
+							<li><a href="http://resources.arcgis.com/en/home/">ArcGis</a></li>
+							<li><a href="http://mapquery.org/">MapQuery</a></li>
+							<li><a href="http://developer.mapquest.com/web/products/featured/javascript">MapQuest</a></li>
+						</ul>
+					</ul>
+
+				</section>
+
+				<section>
+
+				<header>
+					<h2>Litt koding</h2>
+					<p>Flickr søk i OpenLayers og Leaflet</p>
+				</header>
+				<ul>
+					<li>Kart fra openstreetmap</li>
+					<li>Vise bilder fra søk med popup</li>
+					<li>Clustring av bilder</li>
+					<li>Håndtere flere lag</li>
+				</ul>
+				</section>
+
+	
+
+				<section>
+				<header>
+					<h2>Slutt</h2>
+				</header>
+					
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

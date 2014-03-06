@@ -1,0 +1,36 @@
+a {
+	text-decoration: none;
+	color: white;
+}
+
+#bartelogo {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto !important;
+}
+
+li {
+	color : #E4EAA7;
+}
+
+.sub li {
+	font-size: 0.8em;
+	color: white;
+}
+
+
+#lonlat {
+	height: 450px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+#layers-image {
+	height: 250px;
+	padding-top: 35px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+
