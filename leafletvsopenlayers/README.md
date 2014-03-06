@@ -2,14 +2,16 @@ Kart biblioteker presentation på Bart.js
 
 Installer avhengiheter
 
-"npm install"
+```
+npm install
 
 Installer Grunt
-
-"npm install -g grunt-cli"
+```
+npm install -g grunt-cli
 
 Start server
 
+```
 grunt serve
 
 
