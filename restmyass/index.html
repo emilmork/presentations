@@ -29,7 +29,7 @@
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<script src="data:application/octet-stream;base64,ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnaGVhZGVyJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ25hdicpOwpkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzZWN0aW9uJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2FydGljbGUnKTsKZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYXNpZGUnKTsKZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9vdGVyJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2hncm91cCcpOw=="></script>
 		<![endif]-->
 	</head>
 
@@ -40,54 +40,272 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>REST my Ass</h3>
+					<h3>REST MY ASS</h3>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>REST</h5>
+						<small>Representational State Transfer</small>
+					</header>
+						<ul class="list">
+							<li class="fragment">Roy fielding</li>
+							<li class="fragment">Scalability of the web</li>
+							<li class="fragment">
+								Web architecture
+							</li>
+						</ul>	
 				</section>
 
 				<section class="slides">
 					<header>
 						<h5>Web architecture</h5>
 					</header>
-					<ul class="list">
-						<li>Client-server</li>
-						<li>Uniform interface</li>
-						<li>Layered system</li>
-						<li>Cache</li>
-						<li>Stateless</li>
-						<li>Code-on-demand</li>
+					<div class="lists">
+					<ul class="list left">
+						<li class="fragment">Client-server
+							<ul class="sub-list">
+								<li>Separation of conserns</li>
+							</ul>
+						</li>
+						<li class="fragment">Uniform interface
+							<ul class="sub-list">
+								<li>Identification of resources (URI)</li>
+								<li>Resource representation (JSON, XMM)</li>
+								<li>Self-descriptive messages</li>
+								<li>HATEOAS</li>
+							</ul>
+						</li>
+						<li class="fragment">Layered system
+							<ul class="sub-list">
+								<li>Intemediate servers</li>
+								<li>Security</li>
+								<li>Load balancing</li>
+								<li>Caching etc..</li>
+							</ul>
+						</li>
+
 					</ul>
+					<ul class="list right">
+						<li class="fragment">Stateless</li>
+						<li class="fragment">Cache</li>
+						<li class="fragment">Code-on-demand
+							<ul class="sub-list">
+								<li>Execute code (Javascript)</li>
+							</ul>
+						</li>
+					</ul>
+					</div>
+					    <aside class="notes">
+					        <ul>
+					         	<li>Klient-server, separetion of conserns. Men trenger Uniform interface.
+					         	<li><strong>Uniform interface:</strong> Identifisering, manupilasjon av resurs, gjennom selvbeskrivende meldinger.
+					         	Hypermedia as the engine of application state
+					         	</li>
+					         	<li><strong>Layered System</strong> Skalering, dele cache.</li>
+					         	<li><strong>Cache</strong>Trenger ikke forklaring, men er kanskje den viktigste faktoren
+					         	</li>
+					         	<li><strong>Stateless</strong> Server husker ikek tilstanden til klienten</li>
+					         	<li><strong>Code-On-Demand</strong> (Valgfritt) Klient må kunne kjøre koden som fås fra server. (Javascript f.eks)
+					         	</li>
+					        </ul>
+					    </aside>
 				</section>
 
 				<section class="slides">
 					<header>
-						<h5>REST API</h5>
+						<h5>REST API Design</h5>
+					</header>
+
+					<ul class="list list--desc">
+						<li class="fragment">URI Format
+							<ul class="sub-list">
+								<li><code>URI = scheme "://" authority "/" path [ "?" quary] [ "#" fragment]</code></li>
+							</ul>
+						</li>
+						<li class="fragment">Don´t use slash (/) in the end an URI
+							<ul class="sub-list">
+								<li><code>http://api.path.org/resource/</code></li>
+							</ul>
+						</li>
+						<li class="fragment">Use hyphens (-) for readability
+							<ul class="sub-list">
+								<li><code>http://api.path.org/this-is-readable</code></li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Don`t use underscores (_)
+							<ul class="sub-list">
+								<li><code>Depending on browsers, editors, "_" can get weird or hidden.</code></li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Use lowercase letters.
+							<ul class="sub-list">
+								<li><code>http://API.PATH.org</code></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section class="slides">
+					<header class="h5">
+						REST API Design - Resource Modeling
+					</header>
+					
+					<ul class="list list--desc">
+						<li class="fragment">
+							Collection
+							<ul class="sub-list">
+								<li><code>...org/emplyees</code></li>
+							</ul>
+						</li>
+						<li class="fragment">Document
+							<ul class="sub-list">
+								<li><code>/employees/emil</code></li>
+								<li><code>/employees/emil/hobbies/yodeling</code></li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Stores
+							<ul class="sub-list">
+								<li><code>PUT /employees/1234/hobbies/banjo</code></li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Controller
+							<ul class="sub-list">
+								<li><code>POST /alerts/1234/resend</code></li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Document, Store - Substantiv</li>
+							<li>Collection names - Substantiv flertall</li>
+							<li>Controller names - Verb</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>HTTP Status Codes</h5>
 					</header>
 				</section>
+
 
 				<section class="slides">
 					<header>
 						<h5>Status koder</h5>
 					</header>
+						<ul class="list list--desc">
+							<li>1xx: Informational</li>
+							<li>2xx: Success</li>
+							<li>3xx: Redirection</li>
+							<li>4xx: Client Error</li>
+							<li>5xx: Server Error</li>
+						</ul>
+				
 				</section>
 
 				<section class="slides">
-					<h3>200 - OK</h3>
+					<h4>GET - /trøndera</h4>
 					<div class="fragment">
-						<h2 class="status-code">Det e bærre å doinnjer</h2>
-						<small>"Det er bare å dundre på"<small>
+						<h3>200</h3>
+						<h2 class="status-code">Knært på næsten hoinner, lætt som å kast floinner!</h2>
+						<small>"Det er bare å dundre på"</small>
 					</div>
 				</section>
 
 				<section class="slides">
-					<h5>Status koder</h5>
+					<h4>GET - /trøndera/tomt-fer-sprit</h4>
+					<div class="fragment">
+						<h3>300</h3>
+						<h2 class="status-code">Kor e vein ? D her vart bærre ploinner!</h2>
+						<small>"Hvor er jeg? Dette ble bare plunder"</small>
+					</div>
 				</section>
 
 				<section class="slides">
-					<h5>Status koder</h5>
+					<h4>GET - /trøndera?påfyll=false</h4>
+					<div class="fragment">
+						<h3>400</h3>
+						<h2 class="status-code">Herre va itj nå oinner, du hi gjort ein bloinner!</h2>
+						<small>"Du har gjort en blemme/feil"</small>
+						<img class="fragment" style="position: absolute; top: 100px; left: 150px; width: 400px; " src="http://25.media.tumblr.com/tumblr_m98kdrrI8f1qf0wh2o1_1280.png"/>
+					</div>
 				</section>
 
-				<section>
-				<header>
-					 <h2 class="fragment roll-in">Klapping ?</h2>
+				<section class="slides">
+					<h4>POST - /trøndera</h4>
+					<div class="fragment">
+						<h3>500</h3>
+						<h2 class="status-code">D e itj bærre å doinner, her e d nåkka som hi gåttoinner!</h2>
+						<small>"Det er ikke bare å dundre på, noe har gått i stykker"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>POST - /trøndera</h4> 
+					<div class="fragment">
+						<h3>201</h3>
+						<h2 class="status-code">Vælkommen heim!</h2>
+						<small>"Du er ikke alene"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>PUT - /trøndera</h4> 
+					<h3>202</h3>
+					<div class="fragment">
+						<h2 class="status-code">Ein plokke lo, å ein går på do.</h2>
+						<small>"En plukker lo, og en går på toalettet"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>POST - /trøndera</h4> 
+					<h4>401</h4>
+					<div class="fragment">
+						<h2 class="status-code">Du kanj itj plokk stein me krabbtein!</h2>
+						<small>"Du kan ikke plukke stein med krabbeteine"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>402</h4>
+					<div class="fragment">
+						<h2 class="status-code">No tar du d me ro!</h2>
+						<small>"No må du ta det med ro"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>404</h4>
+					<div class="fragment">
+						<h2 class="status-code">Kor e Anna? Ho sett sekkert heim å flire.</h2>
+						<small>"Hvor er Anna? Hun sitter sikkert hjemme å ler"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+					<h4>409</h4>
+					<div class="fragment">
+						<h2 class="status-code">Hanj hi ei på si.</h2>
+						<small>"Han har ei på si"</small>
+					</div>
+				</section>
+
+				<section class="slides">
+				<h4>415</h4>
+					<div class="fragment">
+						<h2 class="status-code">Kåre fekk itj ta me moinnspelle på fæsten ten Ola Slæmten.</h2>
+					</div>
+				</section>
+
+				<section class="slides">
+					 <h2 class="fragment roll-in">Slutt</h2>
 				</section>
 
 			</div>

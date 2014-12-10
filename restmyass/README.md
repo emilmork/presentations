@@ -1,12 +1,12 @@
-Presentasjon om kart biblioteker på Bart.js
+Presentation of REST, and HTTP Status Codes.
 
-Installer avhengiheter
+Install dependencies
 
 ```
 npm install
 ```
 
-Installer Grunt
+Install Grunt
 
 ```
 npm install -g grunt-cli
@@ -17,7 +17,5 @@ Start server
 ```
 grunt serve
 ```
-
-Starter på localhost:8000
 
 
