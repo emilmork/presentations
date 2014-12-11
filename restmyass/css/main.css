@@ -27,7 +27,7 @@ li {
 }
 .slides .left {
 	float: left;
-	width: 420px;
+	min-width: 420px;
 }
 .slides .right {
 	float: right;
@@ -53,5 +53,35 @@ li {
  }
  .slides .list--desc li {
  	list-style-type: none;
+ }
+ .slides .list--codes {
+ 	font-size: 2rem;
+ 	list-style-type: none;
+ 	line-height: 4rem;
+ 	margin-left: 10rem;
+ }
+.code-200 {
+ 	color: lightgreen;
+ } 
+.code-300 {
+ 	color: yellow;
+ }
+ .code-400 {
+ 	color: #EF9A9A;
+ }
+ .slides .list .code-500 {
+ 	color: red;
+ }
+ .slides .rear-codes {
+ 	border-bottom: 1px solid yellow;
+ 	width: 20rem;
+	margin-left: -7rem;
+ }
+
+ .list .list--requestMethods {
+	width: 6rem;
+ }
+ .list .request-information{
+ 	width: 30rem;
  }
 

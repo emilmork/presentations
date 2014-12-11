@@ -188,23 +188,50 @@
 					</aside>
 				</section>
 
+
 				<section class="slides">
 					<header>
-						<h5>HTTP Status Codes</h5>
+						<h5>Http Request</h5>
+						<small><code>Request-Link	=Method SP Request-URI SP HTTP-Version CRLF</code></small>
 					</header>
+
+					<ul style="width: 6rem; margin-left:-3rem; text-align:right"class="fragment list list--desc left"><li>
+						<li>HEAD</li>
+						<li>GET</li>
+						<li>PUT</li>
+						<li>POST</li>
+						<li>DELETE</li>
+						<li>PATCH</li>
+						<li>TRACE</li>
+						<li>OPTION</li>
+						<li>CONNECT</li>
+					</ul>
+					<ul  style="width: 30rem;"class="fragment list list--desc left request-information"><li>
+						<li>Retrieve response headers</li>
+						<li>Retrieve a representation of a resource</li>
+						<li>Insert and update a stored resource</li>
+						<li>Create a new resource/execute controllers</li>
+						<li>Remove a resource</li>
+						<li class="rear-codes"></li>
+						<li>Partial update</li>
+						<li>TRACE</li>
+						<li>Retrieve metadate</li>
+						<li>Tunneling</li>
+					</ul>
+
+				
 				</section>
 
-
 				<section class="slides">
 					<header>
-						<h5>Status koder</h5>
+						<h5>Http Status codes</h5>
 					</header>
-						<ul class="list list--desc">
-							<li>1xx: Informational</li>
-							<li>2xx: Success</li>
-							<li>3xx: Redirection</li>
-							<li>4xx: Client Error</li>
-							<li>5xx: Server Error</li>
+						<ul class="list list--codes">
+							<li>1xx: <span class="code-100">Informational</span></li>
+							<li>2xx: <span class="code-200">Success</span></li>
+							<li>3xx: <span class="code-300">Redirection</span></li>
+							<li>4xx: <span class="code-400">Client Error</span></li>
+							<li>5xx: <span class="code-500">Server Error</span></li>
 						</ul>
 				
 				</section>
@@ -214,7 +241,7 @@
 					<div class="fragment">
 						<h3>200</h3>
 						<h2 class="status-code">Knært på næsten hoinner, lætt som å kast floinner!</h2>
-						<small>"Det er bare å dundre på"</small>
+						<small>200 - OK	</small>
 					</div>
 				</section>
 
@@ -223,7 +250,7 @@
 					<div class="fragment">
 						<h3>300</h3>
 						<h2 class="status-code">Kor e vein ? D her vart bærre ploinner!</h2>
-						<small>"Hvor er jeg? Dette ble bare plunder"</small>
+						<small>300 - Redirection</small>
 					</div>
 				</section>
 
@@ -232,8 +259,7 @@
 					<div class="fragment">
 						<h3>400</h3>
 						<h2 class="status-code">Herre va itj nå oinner, du hi gjort ein bloinner!</h2>
-						<small>"Du har gjort en blemme/feil"</small>
-						<img class="fragment" style="position: absolute; top: 100px; left: 150px; width: 400px; " src="http://25.media.tumblr.com/tumblr_m98kdrrI8f1qf0wh2o1_1280.png"/>
+						<small>400 - Client error</small>
 					</div>
 				</section>
 
@@ -242,7 +268,7 @@
 					<div class="fragment">
 						<h3>500</h3>
 						<h2 class="status-code">D e itj bærre å doinner, her e d nåkka som hi gåttoinner!</h2>
-						<small>"Det er ikke bare å dundre på, noe har gått i stykker"</small>
+						<small>500 - Server error</small>
 					</div>
 				</section>
 
@@ -251,7 +277,7 @@
 					<div class="fragment">
 						<h3>201</h3>
 						<h2 class="status-code">Vælkommen heim!</h2>
-						<small>"Du er ikke alene"</small>
+						<small>201 - Created</small>
 					</div>
 				</section>
 
@@ -260,7 +286,7 @@
 					<h3>202</h3>
 					<div class="fragment">
 						<h2 class="status-code">Ein plokke lo, å ein går på do.</h2>
-						<small>"En plukker lo, og en går på toalettet"</small>
+						<small>202 - Accepted (Async)</small>
 					</div>
 				</section>
 
@@ -269,7 +295,7 @@
 					<h4>401</h4>
 					<div class="fragment">
 						<h2 class="status-code">Du kanj itj plokk stein me krabbtein!</h2>
-						<small>"Du kan ikke plukke stein med krabbeteine"</small>
+						<small>401 - Unauthorized</small>
 					</div>
 				</section>
 
@@ -285,7 +311,7 @@
 					<h4>404</h4>
 					<div class="fragment">
 						<h2 class="status-code">Kor e Anna? Ho sett sekkert heim å flire.</h2>
-						<small>"Hvor er Anna? Hun sitter sikkert hjemme å ler"</small>
+						<small>404 Not Found</small>
 					</div>
 				</section>
 
@@ -293,7 +319,7 @@
 					<h4>409</h4>
 					<div class="fragment">
 						<h2 class="status-code">Hanj hi ei på si.</h2>
-						<small>"Han har ei på si"</small>
+						<small>409 - Conflict</small>
 					</div>
 				</section>
 
@@ -302,6 +328,7 @@
 					<div class="fragment">
 						<h2 class="status-code">Kåre fekk itj ta me moinnspelle på fæsten ten Ola Slæmten.</h2>
 					</div>
+					<small>415 Unsupported Media Type</small>
 				</section>
 
 				<section class="slides">
