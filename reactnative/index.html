@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>RN</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="data:application/octet-stream;base64,ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnaGVhZGVyJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ25hdicpOwpkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzZWN0aW9uJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2FydGljbGUnKTsKZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYXNpZGUnKTsKZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9vdGVyJyk7CmRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2hncm91cCcpOw=="></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="bgImage"></div>
+		<div class="bgCover"></div>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides road">
+				<section>
+					<h3>React Native</h3>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>React</h5>
+					</header>
+					<div class="mlist">
+						<h2>UI JavaScript library</h2>
+						<h2>Virtual DOM</h2>
+						<h2>Data flow</h2>
+						<h2>Components</h2>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>Et bibliotek for å rendre layout</li>
+							<li>Virtuel dom - ytelse. Server side, node.js — Ikke avhengig av DOM</li>
+							<li>Reduserer boilerplate med en veis rendring - endring > render alt</li>
+							<li>Lettere å forholde seg til - gitt input vet man output</li>
+							<li>Alle komponenter implementerer en render som returnerer et view(html)</li>
+							<li>Flux, Reflux, Fluxxor, mest kjent Omnicient</li>
+							<li>React ble laget for å erstatte hvilket som helst view system, ikke DOM</li>
+						</ul>
+					</aside>
+				<img class="fragment" src="../images/react1.png"/>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>Native - 3 Pillars</h5>
+					</header>
+					<div class="mlist small">
+						<h2>Touch handling</h2>
+						<h2>Native components</h2>
+						<h2>Style and layout</h2>
+					</div>
+
+				    <aside class="notes">
+				    <ul>
+						<li>Gesture handling er mye bedre native</li>
+						<li>Vi kan ikke lage native komponenter i html css - iltang</li>
+						<li>Style og layout er svært raskt på native - vanskelig å ødelegge</li>
+				    <ul>
+    					</aside>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>React Native</h5>
+					</header>
+					<div class="mlist small">
+						<h2>JavaScriptCore</h2>
+						<h2>Native components</h2>
+						<h2>Layout and style (zero dom)</h2>
+					</div>
+					<img class="fragment" src="../images/react2.png"/>
+
+				    <aside class="notes">
+				    <ul>
+						<li>Kjører javascript i en javascript engine</li>
+						<li>Skal ikke støtte kryss platform komponenter (Det blir opp til open source community)</li>
+						<li>Views initieres på mail tråen først, men oppdaterer alt asynkront etterpå</li>
+						<li>Debug in chrome</li>
+				    <ul>
+    					</aside>
+				</section>
+
+				<section class="slides">
+					<div class="lessMargin">
+						<h5>React css-layout</h5>
+						<small class="link"><a id="link"href="https://github.com/facebook/css-layout">https://github.com/facebook/css-layout</a></small>
+					</div>
+					<img src="../images/react-style.png"/>
+					
+				    <aside class="notes">
+				    <ul>
+						<h2>Inline styles in javascript</h2>
+						<h2>css (flexbox)</h2>
+						<li>Layout påvirker måten vi skriver kode på</li>
+						<li>Subset av css (flexbox)</li>
+				    <ul>
+    					</aside>
+
+				</section>
+
+				<section>
+					<header>
+						<h5>Whats new ?</h5>
+					</header>
+					<img src="../images/react-android.png"/>
+				</section>
+
+				<section class="slides">
+					<header>
+						<h5>Whats new ?</h5>
+					</header>
+					<div class="mlist small">
+						<h2>React Native!</h2>
+					</div>
+					<div class="mlist small">
+						<h2>npm install</h2>
+					</div>
+					<div class="mlist small">
+						<h2>Learn once write anywhere</h2>
+					</div>
+					<div class="mlist small">
+						<h2>Frontend knowledge becomes valuable</h2>
+					</div>
+				    <aside class="notes">
+				    <ul>
+						<li>Hva er nytt</li>
+						<li>En bedre måte å bygge layout på</li>
+						<li>Web teknologi fordeles npm</li>
+						<li>Vi kan bygge kompetanse som kan brukes på tvers av plattformer</li>
+						<li>Vi har mye erfaring med frontend i Bekk</li>
+						<li>Server side native app - vi har mye kunnskap om det</li>
+				    <ul>
+    					</aside>
+				</section>
+				<section>
+					<h3>end</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,124 @@
+.lessMargin {
+	margin-bottom: 0.5rem;
+}
+#link {
+	color: #eeeeee;
+}
+.img-small {
+	height: 15rem;
+}
+.bgImage {
+	position: absolute;
+	width: 2000px;
+	height: 1300px;
+	background: url('../images/road.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-webkit-filter: blur(2px);
+}
+.bgCover {
+	position: absolute;;
+	height: 100%;
+	width: 100%;
+    background: rgba(34,34,34,0.90);
+}
+
+.mlist {
+	display: flex;
+	justify-content: center;
+}
+.mlist h2 {
+	width: 100%;
+	font-size: 2rem;
+	padding: 0.5rem;
+	margin: 0.1rem;
+	display: block;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.slides header {
+	margin-bottom: 4rem;
+	font-size: 3rem;
+}
+
+
+.slides .status-code {
+	color: yellow;
+	margin: 2rem;
+}
+
+li {
+	color : white;
+}
+
+.slides .lists {
+	clear: both;
+}
+
+.slides .list {
+	min-width: 350px;
+}
+.slides .left {
+	float: left;
+	min-width: 420px;
+}
+.slides .right {
+	float: right;
+}
+.slides .list li {
+}
+
+.slides .sub-list {
+	margin: 0.2rem 1rem 0.2rem 0;
+}
+
+.sub-list li {
+	list-style-position: inside;
+	list-style-type: circle;
+	font-size: 0.6em;
+	color: yellow;
+	padding: 0 0.4rem;
+	background-color: gray;
+ }
+
+ .slides .list.list--desc {
+	font-size: 1.5rem;
+ }
+ .slides .list--desc li {
+ 	list-style-type: none;
+ }
+ .slides .list--codes {
+ 	font-size: 2rem;
+ 	list-style-type: none;
+ 	line-height: 4rem;
+ 	margin-left: 10rem;
+ }
+.code-200 {
+ 	color: lightgreen;
+ } 
+.code-300 {
+ 	color: yellow;
+ }
+ .code-400 {
+ 	color: #EF9A9A;
+ }
+ .slides .list .code-500 {
+ 	color: red;
+ }
+ .slides .rear-codes {
+ 	border-bottom: 1px solid yellow;
+ 	width: 20rem;
+	margin-left: -7rem;
+ }
+
+ .list .list--requestMethods {
+	width: 6rem;
+ }
+ .list .request-information{
+ 	width: 30rem;
+ }
+
