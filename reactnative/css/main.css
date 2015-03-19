@@ -122,3 +122,23 @@ li {
  	width: 30rem;
  }
 
+ .slides .img {
+ 	 border: none;
+     height: 70%;
+     width: 100%;
+     background-size: contain;
+ }
+
+ .react1 {
+ 	 background: url('../images/react1.png') no-repeat center center;
+ }
+  .react2 {
+ 	 background: url('../images/react2.png') no-repeat center center;
+ }
+ .react-style {
+	background: url('../images/react-style.png') no-repeat center center;
+ }
+  .react-android {
+	background: url('../images/react-android.png') no-repeat center center;
+ }
+
