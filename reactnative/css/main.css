@@ -141,4 +141,7 @@ li {
   .react-android {
 	background: url('../images/react-android.png') no-repeat center center;
  }
+ .react-native {
+ 	background: url('../images/react-logo.svg') no-repeat center center;
+ }
 

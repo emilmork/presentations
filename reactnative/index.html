@@ -59,12 +59,11 @@
 					<aside class="notes">
 						<ul>
 							<li>Et bibliotek for å rendre layout</li>
-							<li>Virtuel dom - ytelse. Server side, node.js — Ikke avhengig av DOM</li>
-							<li>Reduserer boilerplate med en veis rendring - endring > render alt</li>
-							<li>Lettere å forholde seg til - gitt input vet man output</li>
-							<li>Alle komponenter implementerer en render som returnerer et view(html)</li>
-							<li>Flux, Reflux, Fluxxor, mest kjent Omnicient</li>
-							<li>React ble laget for å erstatte hvilket som helst view system, ikke DOM</li>
+							<li>Virduel dom - differ endringer</li>
+							<li>Rendrer alt på nytt</li>
+							<li>Lettere å forholde seg til, testing - gitt input vet man output</li>
+							<li>(Vis bilde) Alle komponenter implementerer en render som returnerer et view(html)</li>
+							<li>Ikke bare DOM. React ble laget for å erstatte hvilket som helt view system</li>
 						</ul>
 					</aside>
 				<div class="fragment img react1"></div>
@@ -82,9 +81,10 @@
 
 				    <aside class="notes">
 				    <ul>
-						<li>Gesture handling er mye bedre native</li>
-						<li>Vi kan ikke lage native komponenter i html css - iltang</li>
-						<li>Style og layout er svært raskt på native - vanskelig å ødelegge</li>
+				    	<li>Tre ting hvorfor Native apps er best</li>
+						<li>Touch - Vi er fremdeles langt unna på web</li>
+						<li>Components - raske og føles mye bedre enn web komponenter</li>
+						<li>Layout - layout er svært raskt på native - vanskelig å ødelegge</li>
 				    <ul>
     					</aside>
 				</section>
@@ -102,8 +102,9 @@
 
 				    <aside class="notes">
 				    <ul>
+				    	<li>Lar oss skrive native ios and andrd apps i javascript hvor vi kan bruke react til å lage layout</li>
 						<li>Kjører javascript i en javascript engine</li>
-						<li>Views initieres på mail tråen først, men oppdaterer alt asynkront etterpå</li>
+						<li>Kommuniserer via batched async meldings protokoll</li>
 						<li>Skal ikke støtte kryss platform komponenter (Det blir opp til open source community)</li>
 						<li>Slutt på igjennbruk!</li>
 				    <ul>
@@ -118,14 +119,12 @@
 					<div class="fragment img react-style"></div>
 					
 				    <aside class="notes">
-				    <ul>
-						<h2>Inline styles in javascript</h2>
-						<h2>css (flexbox)</h2>
-						<li>Layout påvirker måten vi skriver kode på</li>
-						<li>Subset av css (flexbox)</li>
-				    <ul>
-    					</aside>
-
+					    <ul>
+					    	<li>slags flexbox layout system med et subset av css</li>
+							<li>Deklareres inline in javascript</li>
+							<li>NB! Dette kommer til å bli mer vanlig på weben sjenerelt</li>
+					    <ul>
+					</aside>
 				</section>
 
 				<section class="slides">
@@ -139,7 +138,7 @@
 				    <ul>
 						<li>Titanium har en tilsvarende platform. Async javascript og Native objecter</li>
 						<li>Hvorfor React ? Bedre markedsføring, kode eksempler, og best practices</li>
-						<li>Morsomt å se web teknologi som tilnærmer seg hvordan Native apps blir skrevet (spesielt layout)</li>
+						<li>(Vis bilde) Morsomt å se web teknologi som tilnærmer seg hvordan Native apps blir skrevet (spesielt layout)</li>
 						<li>Men hva skiller React fra andre Platformer?</li>
 				    <ul>
     					</aside>
@@ -163,13 +162,11 @@
 					</div>
 				    <aside class="notes">
 				    <ul>
-						<li>En bedre måte å bygge layout på</li>
-						<li>Web teknologi fordeler som npm</li>
-						<li>Debugging i chrome!</li>
-						<li>Instant refresh (holy graile)</li>
-						<li>Vi kan bygge kompetanse som kan brukes på tvers av plattformer</li>
-						<li>(Viktig) Vi har mye erfaring med frontend i Bekk</li>
-						<li>(Future) Server side native app (kjør appen i node) - vi har mye kunnskap om det</li>
+				    	<li>Alle fordeler med React - En bedre måte å bygge layout på</li>
+						<li>Støtte for Web teknologi som npm</li>
+						<li>Debugging i chrome! - Instant refresh (holy graile)</li>
+						<li>Mange spennende muligheter - serverside native app</li>
+						<li>NB! Mye erfaring i bekk med frontend</li>
 				    <ul>
     					</aside>
 				</section>
